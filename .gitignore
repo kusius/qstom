@@ -1,0 +1,11 @@
+# Directories to ignore
+/build/*
+/debugger/*
+
+# Files to ignore
+*.so*
+*.core*
+*.dll*
+
+# Emacs projectile dummy file
+.projectile
