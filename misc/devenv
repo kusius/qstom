@@ -1,0 +1,4 @@
+#!/bin/sh
+WORKING_DIRECTORY=$ENGINE_PATH/data
+BINARY_PATH=$ENGINE_PATH/build/debug/qstom
+(cd $WORKING_DIRECTORY && exec kdbg $BINARY_PATH > /dev/null 2>&1 &)

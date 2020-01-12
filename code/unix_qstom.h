@@ -5,14 +5,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-struct file_data
+struct platform_file_data
 {
     char* Memory;
     unsigned int FileSize;
 };
 
 internal void
-FreeFileMemory(file_data* File)
+PlatformFreeFileMemory(platform_file_data* File)
 {
     free(File->Memory);
     *File = {};
@@ -20,7 +20,7 @@ FreeFileMemory(file_data* File)
 }
 
 internal void
-ReadEntireFile(const char* FileName, file_data* FileInfoOut)
+PlatformReadFile(const char* FileName, platform_file_data* FileInfoOut)
 {
     struct stat FileStats;
     FILE* f;
