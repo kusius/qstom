@@ -240,8 +240,8 @@ int main(void)
         glViewport(0, 0, WindowWidth, WindowHeight);
         glClearColor(1.0f, 0.1f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-        //RotateTransform(Transform, 10 * FrameDeltaTime,
-          //              Axis_t, Transform);
+        RotateTransform(Model, -45.0f * FrameDeltaTime,
+                        vec3 {1.0f, 0.0f, 0.0f}, Model);
         UpdateRenderData();
         glDrawArrays(GL_TRIANGLES, 0, 6);
         glfwSwapBuffers(WindowHandle);
